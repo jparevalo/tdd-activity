@@ -2,7 +2,7 @@ import unittest
 from BowlingGame.game import Game
 from BowlingGame.game import InvalidNumberError
 
-class StringOperationTests(unittest.TestCase):
+class BowlingGameTests(unittest.TestCase):
     def test_record_roll__given_a_negative_number__raise_invalid_number_exception(self):
         # Arrange
         any_negative_number = -1
@@ -12,3 +12,13 @@ class StringOperationTests(unittest.TestCase):
         with self.assertRaises(InvalidNumberError):
             # Act
             _ = bowling_game.record_roll(num_pins_knocked=any_negative_number)
+
+    def test_record_roll__given_a_number_bigger_than_10__raise_invalid_number_exception(self):
+        # Arrange
+        any_number_bigger_than_10 = 15
+        bowling_game = Game()
+
+        # Assert
+        with self.assertRaises(InvalidNumberError):
+            # Act
+            _ = bowling_game.record_roll(num_pins_knocked=any_number_bigger_than_10)
