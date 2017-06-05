@@ -25,14 +25,10 @@ class Game(object):
             self._turn_number += 1
         else:  # New turn
             self._turn_score = num_pins_knocked
-            if self._in_spare:
+            if self._in_spare or self._in_strike:
                 self._previous_turn_score += num_pins_knocked
                 self._game_score[self._turn_number - 1] = self._previous_turn_score
                 self._in_spare = False
-                self._previous_turn_score = 0
-            elif self._in_strike:
-                self._previous_turn_score += num_pins_knocked
-                self._game_score[self._turn_number - 1] = self._previous_turn_score
                 self._in_strike = False
                 self._previous_turn_score = 0
             if num_pins_knocked == 10:

@@ -201,5 +201,39 @@ class BowlingGameTests(unittest.TestCase):
         # Assert
         self.assertEqual(expected_score, final_score)
 
+    def test_get_score__given_a_full_game_with_only_spares__return_correct_score(self):
+        # Arrange
+        any_number = 3
+        number_for_spare = 7
+        bowling_game = Game()
+        bowling_game.record_roll(num_pins_knocked=any_number)
+        bowling_game.record_roll(num_pins_knocked=number_for_spare)
+        bowling_game.record_roll(num_pins_knocked=any_number)
+        bowling_game.record_roll(num_pins_knocked=number_for_spare)
+        bowling_game.record_roll(num_pins_knocked=any_number)
+        bowling_game.record_roll(num_pins_knocked=number_for_spare)
+        bowling_game.record_roll(num_pins_knocked=any_number)
+        bowling_game.record_roll(num_pins_knocked=number_for_spare)
+        bowling_game.record_roll(num_pins_knocked=any_number)
+        bowling_game.record_roll(num_pins_knocked=number_for_spare)
+        bowling_game.record_roll(num_pins_knocked=any_number)
+        bowling_game.record_roll(num_pins_knocked=number_for_spare)
+        bowling_game.record_roll(num_pins_knocked=any_number)
+        bowling_game.record_roll(num_pins_knocked=number_for_spare)
+        bowling_game.record_roll(num_pins_knocked=any_number)
+        bowling_game.record_roll(num_pins_knocked=number_for_spare)
+        bowling_game.record_roll(num_pins_knocked=any_number)
+        bowling_game.record_roll(num_pins_knocked=number_for_spare)
+        bowling_game.record_roll(num_pins_knocked=any_number)
+        bowling_game.record_roll(num_pins_knocked=number_for_spare)
+        bowling_game.record_roll(num_pins_knocked=any_number)
+        expected_score = 130
+
+        # Act
+        final_score = bowling_game.get_score()
+
+        # Assert
+        self.assertEqual(expected_score, final_score)
+
 
 
