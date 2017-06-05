@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4934c3d3-b5e3-460f-830a-d3c39c6eba91" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/BowlingGame/game.py" afterPath="$PROJECT_DIR$/BowlingGame/game.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Tests/test_game.py" afterPath="$PROJECT_DIR$/Tests/test_game.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -12,7 +13,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/tdd-activity$Unittests_in_test_game.coverage" NAME="Unittests in test_game Coverage Results" MODIFIED="1496679421475" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Tests" />
+    <SUITE FILE_PATH="coverage/tdd-activity$Unittests_in_test_game.coverage" NAME="Unittests in test_game Coverage Results" MODIFIED="1496680789142" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Tests" />
   </component>
   <component name="CreatePatchCommitExecutor">
     <option name="PATCH_PATH" value="" />
@@ -20,11 +21,11 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="test_game.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="test_game.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Tests/test_game.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="865">
-              <caret line="104" column="0" lean-forward="true" selection-start-line="104" selection-start-column="0" selection-end-line="104" selection-end-column="0" />
+            <state relative-caret-position="106">
+              <caret line="107" column="4" lean-forward="true" selection-start-line="107" selection-start-column="4" selection-end-line="108" selection-end-column="28" />
               <folding>
                 <element signature="e#0#15#0" expanded="true" />
               </folding>
@@ -32,11 +33,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="game.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="game.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/BowlingGame/game.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="161">
-              <caret line="7" column="17" lean-forward="false" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
+            <state relative-caret-position="598">
+              <caret line="35" column="35" lean-forward="false" selection-start-line="35" selection-start-column="35" selection-end-line="35" selection-end-column="35" />
               <folding />
             </state>
           </provider>
@@ -57,8 +58,8 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/BowlingGame/game.py" />
         <option value="$PROJECT_DIR$/Tests/test_game.py" />
+        <option value="$PROJECT_DIR$/BowlingGame/game.py" />
       </list>
     </option>
   </component>
@@ -396,34 +397,34 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="Unittests_in_test_game - 2017.06.05 at 12h 05m 07s.xml">
+    <history-entry file="Unittests_in_test_game - 2017.06.05 at 12h 34m 57s.xml">
       <configuration name="Unittests in test_game" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_in_test_game - 2017.06.05 at 12h 05m 21s.xml">
+    <history-entry file="Unittests_in_test_game - 2017.06.05 at 12h 35m 35s.xml">
       <configuration name="Unittests in test_game" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_in_test_game - 2017.06.05 at 12h 05m 57s.xml">
+    <history-entry file="Unittests_in_test_game - 2017.06.05 at 12h 36m 00s.xml">
       <configuration name="Unittests in test_game" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_in_test_game - 2017.06.05 at 12h 06m 49s.xml">
+    <history-entry file="Unittests_in_test_game - 2017.06.05 at 12h 36m 25s.xml">
       <configuration name="Unittests in test_game" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_in_test_game - 2017.06.05 at 12h 08m 47s.xml">
+    <history-entry file="Unittests_in_test_game - 2017.06.05 at 12h 37m 15s.xml">
       <configuration name="Unittests in test_game" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_in_test_game - 2017.06.05 at 12h 09m 00s.xml">
+    <history-entry file="Unittests_in_test_game - 2017.06.05 at 12h 37m 37s.xml">
       <configuration name="Unittests in test_game" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_in_test_game - 2017.06.05 at 12h 10m 05s.xml">
+    <history-entry file="Unittests_in_test_game - 2017.06.05 at 12h 38m 10s.xml">
       <configuration name="Unittests in test_game" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_in_test_game - 2017.06.05 at 12h 13m 55s.xml">
+    <history-entry file="Unittests_in_test_game - 2017.06.05 at 12h 38m 57s.xml">
       <configuration name="Unittests in test_game" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_in_test_game - 2017.06.05 at 12h 14m 10s.xml">
+    <history-entry file="Unittests_in_test_game - 2017.06.05 at 12h 39m 39s.xml">
       <configuration name="Unittests in test_game" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_in_test_game - 2017.06.05 at 12h 17m 01s.xml">
+    <history-entry file="Unittests_in_test_game - 2017.06.05 at 12h 39m 49s.xml">
       <configuration name="Unittests in test_game" configurationId="tests" />
     </history-entry>
   </component>
@@ -480,21 +481,21 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/BowlingGame/game.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="161">
-          <caret line="7" column="17" lean-forward="false" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Tests/test_game.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="865">
-          <caret line="104" column="0" lean-forward="true" selection-start-line="104" selection-start-column="0" selection-end-line="104" selection-end-column="0" />
+        <state relative-caret-position="106">
+          <caret line="107" column="4" lean-forward="true" selection-start-line="107" selection-start-column="4" selection-end-line="108" selection-end-column="28" />
           <folding>
             <element signature="e#0#15#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BowlingGame/game.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="598">
+          <caret line="35" column="35" lean-forward="false" selection-start-line="35" selection-start-column="35" selection-end-line="35" selection-end-column="35" />
+          <folding />
         </state>
       </provider>
     </entry>
