@@ -24,8 +24,10 @@ class Game(object):
             self._turn_number += 1
         else:  # New turn
             self._turn_score = num_pins_knocked
-            if self._in_spare or self._in_strike:
+            if self._in_spare:
                 self._handle_spare(knocked_pins=num_pins_knocked)
+            elif self._in_strike:
+                self._handle_strike(knocked_pins=num_pins_knocked)
             if num_pins_knocked == 10:
                 self._handle_strike(knocked_pins=num_pins_knocked)
             self._last_roll = self._turn_score
@@ -40,7 +42,6 @@ class Game(object):
             previous_turn = self._turn_number - 1
             self._game_score[previous_turn] = self._previous_turn_score
             self._in_spare = False
-            self._in_strike = False
             self._previous_turn_score = 0
 
     def _handle_strike(self, knocked_pins):
@@ -54,7 +55,6 @@ class Game(object):
                 self._previous_turn_score += knocked_pins
                 previous_turn = self._turn_number - 1
                 self._game_score[previous_turn] = self._previous_turn_score
-                self._in_spare = False
                 self._in_strike = False
                 self._previous_turn_score = 0
 
