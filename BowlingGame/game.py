@@ -13,17 +13,20 @@ class Game(object):
         if num_pins_knocked not in range(0, 11):
             raise InvalidNumberError("The number must be between 0 and 10")
         elif self._roll_number % 2 == 0:  # Inside turn
-            self._turn_score += num_pins_knocked
-            if self._last_roll + num_pins_knocked == 10:
-                self._handle_spare(knocked_pins=num_pins_knocked)
-            else:
-                self._game_score[self._turn_number] = self._turn_score
-            if self._in_strike:
-                self._previous_turn_score += num_pins_knocked
-            self._roll_number += 1
-            self._turn_number += 1
+            self._second_turn_roll(knocked_pins=num_pins_knocked)
         else:  # New turn
             self._first_turn_roll(knocked_pins=num_pins_knocked)
+
+    def _second_turn_roll(self, knocked_pins):
+        self._turn_score += knocked_pins
+        if self._last_roll + knocked_pins == 10:
+            self._handle_spare(knocked_pins=knocked_pins)
+        else:
+            self._game_score[self._turn_number] = self._turn_score
+        if self._in_strike:
+            self._previous_turn_score += knocked_pins
+        self._roll_number += 1
+        self._turn_number += 1
 
     def _first_turn_roll(self, knocked_pins):
         self._turn_score = knocked_pins
