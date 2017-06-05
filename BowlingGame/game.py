@@ -37,7 +37,8 @@ class Game(object):
             self._previous_turn_score = self._turn_score
         else:
             self._previous_turn_score += knocked_pins
-            self._game_score[self._turn_number - 1] = self._previous_turn_score
+            previous_turn = self._turn_number - 1
+            self._game_score[previous_turn] = self._previous_turn_score
             self._in_spare = False
             self._in_strike = False
             self._previous_turn_score = 0
@@ -51,14 +52,14 @@ class Game(object):
                 self._previous_turn_score = knocked_pins
             else:
                 self._previous_turn_score += knocked_pins
-                self._game_score[self._turn_number - 1] = self._previous_turn_score
+                previous_turn = self._turn_number - 1
+                self._game_score[previous_turn] = self._previous_turn_score
                 self._in_spare = False
                 self._in_strike = False
                 self._previous_turn_score = 0
 
     def get_score(self):
         return sum(self._game_score)
-
 
 
 class InvalidNumberError(Exception):
