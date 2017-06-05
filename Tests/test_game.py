@@ -168,5 +168,38 @@ class BowlingGameTests(unittest.TestCase):
         # Assert
         self.assertEqual(expected_score, final_score)
 
+    def test_get_score__given_a_full_game_with_only_strikes__return_correct_score(self):
+        # Arrange
+        number_for_strike = 10
+        bowling_game = Game()
+        bowling_game.record_roll(num_pins_knocked=number_for_strike)
+        bowling_game.record_roll(num_pins_knocked=number_for_strike)
+        bowling_game.record_roll(num_pins_knocked=number_for_strike)
+        bowling_game.record_roll(num_pins_knocked=number_for_strike)
+        bowling_game.record_roll(num_pins_knocked=number_for_strike)
+        bowling_game.record_roll(num_pins_knocked=number_for_strike)
+        bowling_game.record_roll(num_pins_knocked=number_for_strike)
+        bowling_game.record_roll(num_pins_knocked=number_for_strike)
+        bowling_game.record_roll(num_pins_knocked=number_for_strike)
+        bowling_game.record_roll(num_pins_knocked=number_for_strike)
+        bowling_game.record_roll(num_pins_knocked=number_for_strike)
+        bowling_game.record_roll(num_pins_knocked=number_for_strike)
+        bowling_game.record_roll(num_pins_knocked=number_for_strike)
+        bowling_game.record_roll(num_pins_knocked=number_for_strike)
+        bowling_game.record_roll(num_pins_knocked=number_for_strike)
+        bowling_game.record_roll(num_pins_knocked=number_for_strike)
+        bowling_game.record_roll(num_pins_knocked=number_for_strike)
+        bowling_game.record_roll(num_pins_knocked=number_for_strike)
+        bowling_game.record_roll(num_pins_knocked=number_for_strike)
+        bowling_game.record_roll(num_pins_knocked=number_for_strike)
+        bowling_game.record_roll(num_pins_knocked=number_for_strike)
+        expected_score = 300
+
+        # Act
+        final_score = bowling_game.get_score()
+
+        # Assert
+        self.assertEqual(expected_score, final_score)
+
 
 

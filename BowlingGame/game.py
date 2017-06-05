@@ -42,7 +42,6 @@ class Game(object):
             self._roll_number += 1
 
     def get_score(self):
-        print self._game_score
         return sum(self._game_score)
 
 
