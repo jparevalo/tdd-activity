@@ -22,3 +22,23 @@ class BowlingGameTests(unittest.TestCase):
         with self.assertRaises(InvalidNumberError):
             # Act
             _ = bowling_game.record_roll(num_pins_knocked=any_number_bigger_than_10)
+
+    def test_record_roll__given_a_number_between_0_and_10__does_not_raise_any_exception(self):
+        # Arrange
+        any_valid_number = 7
+        bowling_game = Game()
+        raised_exception = False
+        expected_result = False
+
+        # Act
+        try:
+            bowling_game.record_roll(num_pins_knocked=any_valid_number)
+        except:
+            raised_exception = True
+
+        # Assert
+        self.assertEqual(expected_result, raised_exception)
+
+
+
+
