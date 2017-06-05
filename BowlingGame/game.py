@@ -23,15 +23,18 @@ class Game(object):
             self._roll_number += 1
             self._turn_number += 1
         else:  # New turn
-            self._turn_score = num_pins_knocked
-            if self._in_spare:
-                self._handle_spare(knocked_pins=num_pins_knocked)
-            elif self._in_strike:
-                self._handle_strike(knocked_pins=num_pins_knocked)
-            if num_pins_knocked == 10:
-                self._handle_strike(knocked_pins=num_pins_knocked)
-            self._last_roll = self._turn_score
-            self._roll_number += 1
+            self._first_turn_roll(knocked_pins=num_pins_knocked)
+
+    def _first_turn_roll(self, knocked_pins):
+        self._turn_score = knocked_pins
+        if self._in_spare:
+            self._handle_spare(knocked_pins=knocked_pins)
+        elif self._in_strike:
+            self._handle_strike(knocked_pins=knocked_pins)
+        if knocked_pins == 10:
+            self._handle_strike(knocked_pins=knocked_pins)
+        self._last_roll = self._turn_score
+        self._roll_number += 1
 
     def _handle_spare(self, knocked_pins):
         if self._roll_number % 2 == 0:
