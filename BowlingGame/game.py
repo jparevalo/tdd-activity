@@ -19,20 +19,30 @@ class Game(object):
                 self._previous_turn_score = self._turn_score
             else:
                 self._game_score[self._turn_number] = self._turn_score
+            if self._in_strike:
+                self._previous_turn_score += num_pins_knocked
             self._roll_number += 1
             self._turn_number += 1
         else:  # New turn
             self._turn_score = num_pins_knocked
             if self._in_spare:
                 self._previous_turn_score += num_pins_knocked
-                self._game_score[self._turn_number-1] = self._previous_turn_score
+                self._game_score[self._turn_number - 1] = self._previous_turn_score
                 self._in_spare = False
+                self._previous_turn_score = 0
+            elif self._in_strike:
+                self._previous_turn_score += num_pins_knocked
+                self._game_score[self._turn_number - 1] = self._previous_turn_score
+                self._in_strike = False
+                self._previous_turn_score = 0
             if num_pins_knocked == 10:
                 self._in_strike = True
+                self._previous_turn_score = num_pins_knocked
             self._last_roll = self._turn_score
             self._roll_number += 1
 
     def get_score(self):
+        print self._game_score
         return sum(self._game_score)
 
 
