@@ -55,4 +55,20 @@ class BowlingGameTests(unittest.TestCase):
         # Assert
         self.assertEqual(expected_result, raised_exception)
 
+    def test_record_roll__given_0_knocked_pins__does_not_raise_any_exception(self):
+        # Arrange
+        knocked_pins = 0
+        bowling_game = Game()
+        raised_exception = False
+        expected_result = False
+
+        # Act
+        try:
+            bowling_game.record_roll(num_pins_knocked=knocked_pins)
+        except:
+            raised_exception = True
+
+        # Assert
+        self.assertEqual(expected_result, raised_exception)
+
 
